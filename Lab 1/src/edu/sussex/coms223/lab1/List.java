@@ -1,6 +1,6 @@
-package LabOneUpdated;
+package edu.sussex.coms223.lab1;
 
-public class List<E> {
+public interface List<E> {
 	boolean add(E e);
 
 	boolean remove(E e);
@@ -11,5 +11,3 @@ public class List<E> {
 
 	void clear();
 }
-
-

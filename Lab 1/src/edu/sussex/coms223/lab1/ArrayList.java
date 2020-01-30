@@ -1,6 +1,6 @@
-package LabOneUpdated;
+package edu.sussex.coms223.lab1;
 
-public class LabOne <E> implements List<E> {
+public class ArrayList<E> implements List<E> {
 	private Object[] data = new Object[0];
 
 	@Override
@@ -35,20 +35,24 @@ public class LabOne <E> implements List<E> {
 
 	@Override
 	public E get(int index) {
-		// TODO Auto-generated method stub
-		return null;
+		if(index < 0 || index >= data.length)
+				throw new IllegalArgumentException("index out of bounds");
+	 return (E) data[index];
+		
+		
 	}
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+	return data.length;
+		
 	}
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
+	
+	 data = new Object[0];
 
 	}
-}
 }
