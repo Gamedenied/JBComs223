@@ -33,26 +33,21 @@ public class ArrayList<E> implements List<E> {
 		return index != -1;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public E get(int index) {
-		if(index < 0 || index >= data.length)
-				throw new IllegalArgumentException("index out of bounds");
-	 return (E) data[index];
-		
-		
+		if (index < 0 || index >= data.length)
+			throw new IllegalArgumentException("index out of range");
+		return (E) data[index];
 	}
 
 	@Override
 	public int size() {
-		
-	return data.length;
-		
+		return data.length;
 	}
 
 	@Override
 	public void clear() {
-	
-	 data = new Object[0];
-
+		data = new Object[0];
 	}
 }
