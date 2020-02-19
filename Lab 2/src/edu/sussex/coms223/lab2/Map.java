@@ -13,11 +13,13 @@ package edu.sussex.coms223.lab2;
 public interface Map<K, V> {
 	V put(K key, V value);
 
-	V get(K key);
+	V get(int i);
 
 	V remove(K key);
 
 	int size();
 
 	void clear();
+
+	V get(K key);
 }
